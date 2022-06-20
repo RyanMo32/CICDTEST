@@ -17,8 +17,8 @@ jobs:
       - run: npm test
         env:
           CI: true
-      name: Deploy
 
+Deploy:
 on:
   push:
     branches:
