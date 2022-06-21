@@ -14,4 +14,4 @@ jobs:
         with:
           heroku_api_key: ${{secrets.8381f3f6-706f-4354-8c68-aa3c35dbf09a}}
           heroku_app_name: "test-cdci" #Must be unique in Heroku
-          heroku_email: "RyanMo32@gmail.com" 
+          heroku_email: "RyanMo32@gmail.com"  
