@@ -16,4 +16,21 @@ jobs:
       - run: npm run build --if-present
       - run: npm test
         env:
-          CI: true;
+          CI: true,
+
+name: Deploy
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.8381f3f6-706f-4354-8c68-aa3c35dbf09a}}
+          heroku_app_name: "test-cdci" #Must be unique in Heroku
+          heroku_email: "RyanMo32@gmail.com"  
